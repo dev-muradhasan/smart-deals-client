@@ -2,6 +2,7 @@
 import { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
+import MyContainer from "../../MyContainer/MyContainer";
 
 const Register = () => {
     const { googleSignIn , setLoading} = use(AuthContext)
@@ -56,7 +57,7 @@ const Register = () => {
     }
 
     return (
-        <div className="min-h-[calc(100vh-80px)] flex items-center justify-center px-4 py-10">
+        <MyContainer className="flex items-center justify-center py-10">
             <div className="w-full max-w-md rounded-xl bg-base-100 p-7 shadow-xl md:p-8">
 
                 {/* Title */}
@@ -142,7 +143,7 @@ const Register = () => {
                         {/* Register Button */}
                         <button
                             type="submit"
-                            className="btn btn-primary w-full mt-3 text-white"
+                            className="btn btn-gradient w-full mt-3 text-white"
                         >
                             Register
                         </button>
@@ -160,7 +161,7 @@ const Register = () => {
                     Sign up with Google
                 </button>
             </div>
-        </div>
+        </MyContainer>
     );
 };
 
